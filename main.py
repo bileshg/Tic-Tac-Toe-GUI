@@ -23,7 +23,7 @@ class TicTacToe(tk.Frame):
         self.message_label = tk.Label(self, text='Tic Tac Toe')
         self.message_label.grid(row=0, column=0, columnspan=3, pady=10)
 
-        button_font = font.Font(size=16, weight='bold')
+        button_font = font.Font(weight='bold')
         self.button_grid = []
         for i in range(3):
             button_row = []
