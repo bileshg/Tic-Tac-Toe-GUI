@@ -21,7 +21,7 @@ class TicTacToe(tk.Frame):
 
     def create_widgets(self):
         self.message_label = tk.Label(self, text='Tic Tac Toe')
-        self.message_label.grid(row=0, column=0, columnspan=3, pady=10)
+        self.message_label.grid(row=0, column=0, columnspan=3, pady=5)
 
         button_font = font.Font(weight='bold')
         self.button_grid = []
@@ -30,18 +30,18 @@ class TicTacToe(tk.Frame):
             for j in range(3):
                 button = tk.Button(self,
                                    text=' ',
-                                   width=10,
-                                   height=5,
+                                   width=2,
+                                   height=2,
                                    font=button_font,
                                    command=lambda r=i, c=j: self.play(r, c))
-                button.grid(row=i + 1, column=j, padx=5, pady=5)
+                button.grid(row=i + 1, column=j, padx=2, pady=2)
                 button_row.append(button)
             self.button_grid.append(button_row)
 
         self.reset_button = tk.Button(self,
                                       text='Reset',
                                       command=self.new_game)
-        self.reset_button.grid(row=4, column=0, columnspan=3, pady=10)
+        self.reset_button.grid(row=4, column=0, columnspan=3, pady=5)
 
     def new_game(self):
         self.board = [[f'{i * 3 + j + 1}' for j in range(3)] for i in range(3)]
