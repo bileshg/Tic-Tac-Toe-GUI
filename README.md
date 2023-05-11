@@ -13,6 +13,7 @@ This project is a simple implementation of the classic Tic Tac Toe game using Py
 This project requires the following dependencies:
 
 - Python 3.6+
+- Poetry
 
 ## Installation
 
